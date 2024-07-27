@@ -64,9 +64,6 @@ export default {
             <button type="button" class="btn btn-info me-2" @click="cancelar">
               Cancel
             </button>
-            <button type="reset" class="btn btn-info me-2" @click="resetForm">
-              Reset
-            </button>
             <button type="submit" class="btn btn-info">Save</button>
           </div>
         </form>
