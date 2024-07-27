@@ -4,6 +4,7 @@ import Editrequest from "../components/EditRequest.vue"
 
 <template>
   <main>
+    <h2 class="pt-5">Edit your support request</h2>
     <Editrequest />
   </main>
 </template>
@@ -13,6 +14,11 @@ import Editrequest from "../components/EditRequest.vue"
 main {
   height: 100vh;
   background: radial-gradient(#116E8D, #093043);
+  text-align: center;
+
+  h2 {
+    color: white;
+  }
  }
 
 @media (min-width: 1024px) {

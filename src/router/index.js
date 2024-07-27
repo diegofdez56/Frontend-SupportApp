@@ -1,30 +1,44 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from "vue-router";
+
+const AboutView = () => import("../views/AboutView.vue");
+const HomeView = () => import("../views/HomeView.vue");
+const CreateView = () => import("../views/CreateView.vue");
+const EditView = () => import("../views/EditView.vue");
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
+      path: "/",
+      name: "Login",
+      component: HomeView,
+      meta: { title: "SupportApp" },
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue')
+      path: "/home",
+      name: "Home",
+      component: AboutView,
+      meta: { title: "SupportApp" },
     },
     {
-      path: '/create',
-      name: 'create',
-      component: () => import('../views/CreateView.vue')
+      path: "/new-request",
+      name: "NewRequest",
+      component: CreateView,
+      meta: { title: "New Request" },
     },
     {
-      path: '/edit',
-      name: 'edit',
-      component: () => import('../views/EditView.vue')
-    }
-  ]
-})
+      path: "/edit-request/:id",
+      name: "EditRequest",
+      component: EditView,
+      props: true,
+      meta: { title: "Edit Request" },
+    },
+  ],
+});
 
-export default router
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || "SupportApp";
+  next();
+});
+
+export default router;
