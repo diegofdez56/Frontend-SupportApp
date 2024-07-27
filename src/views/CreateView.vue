@@ -1,12 +1,10 @@
 <script setup>
-import HelloWorld from '../components/HelloWorld.vue'
-import Navbar from '../components/WelcomeItem.vue'
+import Createrequest from "../components/CreateRequest.vue"
 </script>
 
 <template>
   <main>
-    <Navbar />
-    <HelloWorld />
+    <Createrequest />
   </main>
 </template>
 

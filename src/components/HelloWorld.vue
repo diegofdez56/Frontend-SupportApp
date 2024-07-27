@@ -1,44 +1,42 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
-  </div>
+  <form id="list-request" class="mt-5">
+    <div class="mb-3" id="section">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3" id="section">
+      <label for="exampleInputPassword1" class="form-label">Subject</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3" id="section">
+      <label for="exampleFormControlTextarea1" class="form-label">Desciption</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group mb-3" id="section">
+      <label for="fecha">Date:</label>
+      <input type="date" id="fecha" v-model="fecha" required />
+    </div>
+    <button type="submit" class="btn btn-info" id="section">Edit</button>
+  </form>
 </template>
 
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
+<style scoped lang="scss">
 
-h3 {
-  font-size: 1.2rem;
-}
+  #list-request {
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
+    #section {
+      width: 250px;
+    }
   }
-}
 </style>
