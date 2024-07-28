@@ -1,38 +1,4 @@
 <script>
-export default {
-  data() {
-    return {
-      nombre: "",
-      fecha: "",
-      asunto: "",
-      descripcion: "",
-    };
-  },
-  methods: {
-    cancelar() {
-      // Lógica para el botón de cancelar
-      alert("Formulario cancelado");
-    },
-    resetForm() {
-      // Resetear el formulario
-      this.$refs.formulario.reset();
-      this.nombre = "";
-      this.fecha = "";
-      this.asunto = "";
-      this.descripcion = "";
-    },
-    submitForm() {
-      // Lógica para el botón de confirmar
-      alert("Formulario enviado");
-      console.log({
-        nombre: this.nombre,
-        fecha: this.fecha,
-        asunto: this.asunto,
-        descripcion: this.descripcion,
-      });
-    },
-  },
-};
 </script>
 
 <template>

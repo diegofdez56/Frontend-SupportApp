@@ -13,7 +13,7 @@ import Navbar from '../components/WelcomeItem.vue'
 <style scoped lang="scss">
 
 main {
-  height: 100vh;
+  height: 100%;
   background: radial-gradient(#116E8D, #093043);
  }
 
