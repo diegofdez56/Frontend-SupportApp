@@ -65,7 +65,7 @@ const cancelar = () => {
             Reset
           </button>
           <RouterLink to="/home">
-            <button type="submit" class="btn btn-info">
+            <button type="submit" class="btn btn-info" @click="handleSubmit">
               Save
             </button>
           </RouterLink>
